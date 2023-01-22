@@ -1,0 +1,15 @@
+	   LXI H,4000
+	   MVI C,0A
+	   MVI A,00
+
+BACK:	   CMP M	// A<-A-M
+	   JNC SKIP
+	   MOV A,M
+
+SKIP:	   INX H
+	   DCR C
+	   JNZ BACK
+	   MOV M,A
+	   HLT
+# ORG 4000H
+# DB 01H,0AH,0BH,3AH,3BH

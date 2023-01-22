@@ -1,0 +1,19 @@
+	   LXI H,0000
+	   LXI D,0000
+	   LDA 2000
+	   ADI 00
+	   JZ EXIT
+	   MOV E,A
+	   LDA 2001
+	   ADI 00
+	   JZ EXIT
+	   MOV C,A
+
+BACK:	   DAD B
+	   DCR E
+	   JNZ BACK
+
+EXIT:	   SHLD 2000
+	   HLT
+# ORG 2000H
+# DB 03H ,04H

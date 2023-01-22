@@ -1,0 +1,4 @@
+Control Signals: READY, RD’, WR’, ALE
+Status Signals: S0, S1, IO/M’
+DMA Signals: HOLD, HLDA
+RESET Signals: RESET IN, RESET OUT
